@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel desde Cero – Guía Teórica Visual para Principiantes</title>
+  <style>
+    /*
+     * Hoja de estilos sencilla para la guía de Excel.
+     * Utiliza la paleta corporativa de Sincero Finance: 
+     * primario (#0B2B40), secundario (#00A86B), acento (#DAA520) y neutros.
+     */
+    :root {
+      --primario: #0B2B40;
+      --secundario: #00A86B;
+      --acento: #DAA520;
+      --gris-claro: #F4F4F4;
+      --gris-oscuro: #1E1E1E;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      color: var(--gris-oscuro);
+      background-color: var(--gris-claro);
+    }
+    header {
+      background-color: var(--primario);
+      color: var(--gris-claro);
+      padding: 1.5rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      background-color: var(--secundario);
+      color: var(--gris-claro);
+      padding: 0.5rem 1rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav ul li {
+      margin-right: 1rem;
+    }
+    nav ul li a {
+      color: var(--gris-claro);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 1rem;
+      background-color: #fff;
+    }
+    h2 {
+      color: var(--primario);
+      border-bottom: 2px solid var(--secundario);
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1rem auto;
+    }
+    .callout {
+      border-left: 6px solid var(--secundario);
+      padding: 0.75rem 1rem;
+      margin: 1rem 0;
+      background-color: #eef8f3;
+    }
+    .callout.importante {
+      border-left-color: var(--acento);
+      background-color: #fff7e6;
+    }
+    .callout.consejo {
+      border-left-color: var(--secundario);
+      background-color: #e6f7f1;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--primario);
+      color: var(--gris-claro);
+      font-size: 0.8rem;
+    }
+    /* Enlaces internos para TOC */
+    .toc {
+      background-color: var(--gris-claro);
+      border: 1px solid var(--gris-oscuro);
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    .toc a {
+      display: block;
+      color: var(--primario);
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Excel desde Cero</h1>
+    <p>Guía Teórica Visual para Principiantes</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#que-es-excel">¿Qué es Excel?</a></li>
+      <li><a href="#acceso">Acceso</a></li>
+      <li><a href="#interfaz">Interfaz</a></li>
+      <li><a href="#elementos-basicos">Elementos</a></li>
+      <li><a href="#tipos-datos">Tipos de datos</a></li>
+      <li><a href="#formulas">Fórmulas</a></li>
+      <li><a href="#fichas">Fichas</a></li>
+      <li><a href="#guardar">Guardar</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div id="que-es-excel">
+      <h2>¿Qué es Excel?</h2>
+      <p><strong>Excel</strong> es una aplicación de hojas de cálculo de la suite Microsoft 365 que permite organizar, analizar y presentar datos de forma eficiente. Es ampliamente utilizada en entornos profesionales y académicos para listas, presupuestos, reportes y análisis básicos.</p>
+      <p>Un <strong>libro</strong> es el archivo que contiene una o varias <strong>hojas</strong>. Cada hoja está compuesta por una cuadrícula de <strong>celdas</strong>. A su vez, un conjunto contiguo de celdas forma un <strong>rango</strong>.</p>
+      <div class="callout consejo">
+        <strong>Consejo:</strong> Piensa en un libro como un archivador, en cada hoja como una sección y en las celdas como las casillas donde anotas la información.
+      </div>
+    </div>
+    <div id="acceso">
+      <h2>Acceso a Excel</h2>
+      <p>Excel está disponible en diversas plataformas. Las versiones de escritorio para <strong>Windows</strong> y <strong>macOS</strong> se instalan localmente y ofrecen el conjunto completo de funcionalidades. La versión <strong>web</strong> de Microsoft 365 permite trabajar en línea desde cualquier navegador moderno. Esta versión se sincroniza con OneDrive y facilita la colaboración en tiempo real.</p>
+      <div class="callout">
+        <strong>Nota:</strong> Para usar Excel en la web necesitas una cuenta de Microsoft. Los documentos se guardan automáticamente en OneDrive.
+      </div>
+    </div>
+    <div id="interfaz">
+      <h2>Interfaz de Excel</h2>
+      <p>La interfaz de Excel se organiza en secciones claramente diferenciadas:</p>
+      <ul>
+        <li><strong>Barra de título:</strong> muestra el nombre del libro y de la aplicación.</li>
+        <li><strong>Cinta de opciones:</strong> agrupa los comandos en <em>fichas</em> o pestañas como Inicio, Insertar, Disposición de página, Fórmulas, Datos, Revisar y Vista.</li>
+        <li><strong>Barra de fórmulas:</strong> permite ver y editar el contenido de la celda activa.</li>
+        <li><strong>Área de trabajo:</strong> la rejilla donde se encuentran las celdas.</li>
+        <li><strong>Barra de estado:</strong> ofrece información contextual como el modo de vista, el zoom y cálculos rápidos de las celdas seleccionadas.</li>
+      </ul>
+      <p>A continuación se muestra una captura de la interfaz de Excel en español:</p>
+      <img src="assets/excel_interface.png" alt="Interfaz de Microsoft Excel en español con la cinta de opciones y una hoja en blanco." />
+    </div>
+    <div id="elementos-basicos">
+      <h2>Elementos básicos de la hoja</h2>
+      <p>La hoja de cálculo se estructura con <strong>columnas</strong> identificadas por letras (A, B, C, …) y <strong>filas</strong> identificadas por números (1, 2, 3, …). Cada intersección forma una <strong>celda</strong>, que se referencia mediante su columna y fila (por ejemplo, A1, B3).</p>
+      <p>Los <strong>rangos</strong> son conjuntos de celdas; pueden ser contiguos (A1:C3) o no contiguos (A1,A3,B2).</p>
+      <div class="callout importante">
+        <strong>Importante:</strong> La celda activa es la que está enmarcada y lista para recibir datos. Su referencia aparece en el cuadro de nombres situado junto a la barra de fórmulas.
+      </div>
+    </div>
+    <div id="tipos-datos">
+      <h2>Tipos de datos y formatos básicos</h2>
+      <p>Excel admite distintos tipos de datos:</p>
+      <ul>
+        <li><strong>Texto:</strong> cadenas de caracteres. Se alinean a la izquierda por defecto.</li>
+        <li><strong>Número:</strong> valores numéricos. Se alinean a la derecha por defecto.</li>
+        <li><strong>Fecha/Hora:</strong> representan fechas y horas; se pueden formatear de múltiples maneras.</li>
+        <li><strong>Moneda:</strong> números con símbolo monetario y separador de miles.</li>
+        <li><strong>Porcentaje:</strong> números interpretados como fracción de cien.</li>
+      </ul>
+      <p>El formato de celda determina cómo se muestra el valor, sin cambiar el valor subyacente.</p>
+    </div>
+    <div id="formulas">
+      <h2>Fórmulas y referencias</h2>
+      <p>Las fórmulas comienzan con el signo <code>=</code> y utilizan funciones para calcular resultados. Por ejemplo: <code>=SUMA(A1:A10)</code> suma los valores del rango A1 a A10.</p>
+      <p>Las <strong>referencias relativas</strong> (A1) cambian al copiar la fórmula a otra celda. Las <strong>referencias absolutas</strong> (<code>$A$1</code>) se mantienen fijas. Las <strong>referencias mixtas</strong> combinan ambos comportamientos (<code>$A1</code> o <code>A$1</code>).</p>
+      <div class="callout">
+        <strong>Nota:</strong> Si una fórmula produce un error (#¡DIV/0!, #N/A, #¡VALOR!, etc.), revisa los argumentos y tipos de datos utilizados.
+      </div>
+    </div>
+    <div id="fichas">
+      <h2>Fichas clave de la cinta</h2>
+      <p>Excel organiza los comandos en pestañas. Estas son las principales fichas:</p>
+      <ul>
+        <li><strong>Inicio:</strong> portapapeles, formato de fuente, alineación, número, estilos de celda y edición.</li>
+        <li><strong>Insertar:</strong> tablas, gráficos, ilustraciones, texto y símbolos.</li>
+        <li><strong>Disposición de página:</strong> configuración de márgenes, orientación, tamaño de papel y área de impresión.</li>
+        <li><strong>Fórmulas:</strong> biblioteca de funciones, creación de nombres definidos y auditoría de fórmulas.</li>
+        <li><strong>Datos:</strong> herramientas para obtener, ordenar, filtrar y validar datos.</li>
+        <li><strong>Revisar:</strong> ortografía, comentarios y protección de hojas/libros.</li>
+        <li><strong>Vista:</strong> opciones de zoom, vistas personalizadas y congelar paneles.</li>
+      </ul>
+    </div>
+    <div id="guardar">
+      <h2>Guardar y tipos de archivo</h2>
+      <p>Al guardar tu libro, puedes elegir diferentes formatos según tus necesidades:</p>
+      <ul>
+        <li><strong>.xlsx:</strong> formato estándar para hojas de cálculo.</li>
+        <li><strong>.xlsm:</strong> permite almacenar macros.</li>
+        <li><strong>.csv:</strong> datos separados por comas, útil para intercambio con otras aplicaciones.</li>
+      </ul>
+      <p>Utiliza nombres descriptivos y guarda con frecuencia para no perder tu trabajo.</p>
+    </div>
+  </div>
+  <footer>
+    <p>Guía elaborada por Sincero Finance – Versión 1.0 – Octubre 2025</p>
+  </footer>
+</body>
+</html>
