@@ -72,6 +72,14 @@
       display: block;
       margin: 1rem auto;
     }
+    /* Logo de Sincero Finance */
+    .logo {
+      height: 60px;
+      width: auto;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1rem;
+    }
     .callout {
       border-left: 6px solid var(--secundario);
       padding: 0.75rem 1rem;
@@ -110,8 +118,14 @@
 </head>
 <body>
   <header>
-    <h1>Excel desde Cero</h1>
-    <p>Guía Teórica Visual para Principiantes</p>
+    <!-- Encabezado con logotipo de Sincero Finance -->
+    <div style="display:flex; align-items:center; flex-wrap:wrap;">
+      <img src="assets/sincero_logo.png" alt="Logo de Sincero Finance" class="logo" />
+      <div>
+        <h1 style="margin:0">Excel desde Cero</h1>
+        <p style="margin:0">Guía Teórica Visual para Principiantes</p>
+      </div>
+    </div>
   </header>
   <nav>
     <ul>
@@ -161,6 +175,8 @@
       <div class="callout importante">
         <strong>Importante:</strong> La celda activa es la que está enmarcada y lista para recibir datos. Su referencia aparece en el cuadro de nombres situado junto a la barra de fórmulas.
       </div>
+      <!-- Captura que muestra las columnas y filas de la hoja -->
+      <img src="assets/excel_cells.png" alt="Detalle de la hoja de Excel mostrando columnas y filas, con celdas A1, B1, etc." />
     </div>
     <div id="tipos-datos">
       <h2>Tipos de datos y formatos básicos</h2>
